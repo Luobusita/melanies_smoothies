@@ -47,7 +47,7 @@ if ingredients_list:
             values ('""" + ingredients_string + """','"""+name_on_order+ """');"""
     ##把生成的insert的sql语句显示在屏幕上
     
-    st.write(my_insert_stmt)
+    ##st.write(my_insert_stmt)
 ##  stop here, will not insert.    
 ##    st.stop()
     
