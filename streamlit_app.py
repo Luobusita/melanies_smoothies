@@ -23,9 +23,11 @@ cnx = st.connection("snowflake")
 session = cnx.session()
 ##显示所有column是这样：
 #my_dataframe = session.table("smoothies.public.fruit_options")
-my_dataframe = session.table("smoothies.public.fruit_options").select(col('FRUIT_NAME'))
+my_dataframe = session.table("smoothies.public.fruit_options").select(col('SEARCH_ON'))
 #显示表的内容在屏幕上
-#st.dataframe(data=my_dataframe, use_container_width=True)
+st.dataframe(data=my_dataframe, use_container_width=True)
+st.stop()
+
 ingredients_list = st.multiselect(
     'Choose up to 5 ingredients:'
     ,my_dataframe
